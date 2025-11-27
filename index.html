@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Практична робота №2 — Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header class="header">
+    <div class="container header__inner">
+        <h1 class="logo">My TS Landing</h1>
+        <button class="btn" data-open-modal>Замовити зараз</button>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container hero__inner">
+            <h2>Сучасний лендинг з TypeScript</h2>
+            <p>Демонстрація роботи з модальними вікнами, подіями, анімаціями та fetch-запитами.</p>
+            <button class="btn" data-open-modal>Відкрити модальне вікно</button>
+        </div>
+    </section>
+
+    <section class="posts">
+        <div class="container">
+            <h2>Останні пости (JSONPlaceholder)</h2>
+            <p class="posts__subtitle">
+                Дані завантажуються з <code>https://jsonplaceholder.typicode.com/posts</code>.
+            </p>
+            <div id="posts-container" class="posts__grid">
+                <!-- Сюди JS/TS вставить карти постів -->
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Модальне вікно -->
+<div id="overlay" class="overlay"></div>
+
+<div id="modal" class="modal">
+    <div class="modal__content">
+        <h3>Модальне вікно</h3>
+        <p>
+            Це модальне вікно відкривається по кліку на кнопки
+            <strong>«Замовити зараз»</strong> або <strong>«Відкрити модальне вікно»</strong>.
+        </p>
+        <button class="btn btn--secondary" data-close-modal>Закрити</button>
+    </div>
+</div>
+
+<!-- Кнопка "наверх" -->
+<button id="scrollTopBtn" class="scroll-top-btn">▲</button>
+
+<!-- Підключення JS, скомпільованого з TypeScript -->
+<script type="module" src="./dist/main.js"></script>
+</body>
+</html>
